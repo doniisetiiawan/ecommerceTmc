@@ -4,6 +4,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Icon } from 'native-base';
 import ProductsNavigator from './productsNavigator';
 import PurchaseNavigator from './purchaseNavigator';
+import MyProfile from './screens/myProfile';
 
 const Tab = createBottomTabNavigator();
 
@@ -29,6 +30,15 @@ function Navigator() {
             component={PurchaseNavigator}
             options={{
               tabBarIcon: () => <Icon name="cart" />,
+              title: 'My Cart',
+            }}
+          />
+          <Tab.Screen
+            name="MyProfile"
+            component={MyProfile}
+            options={{
+              tabBarIcon: () => <Icon name="person" />,
+              title: 'My Profile',
             }}
           />
         </Tab.Navigator>
