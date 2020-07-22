@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { View } from 'react-native';
 import { bindActionCreators } from 'redux';
@@ -35,7 +36,6 @@ class Payment extends Component {
   };
 
   render() {
-    console.log(this.props.user);
     return (
       <View
         style={{
@@ -56,7 +56,13 @@ class Payment extends Component {
 
         {this.props.cart.length > 0 && this.props.user && (
           <View>
-            <Title style={{ margin: 10 }}>
+            <Title
+              style={{
+                margin: 10,
+                color: 'black',
+                alignSelf: 'center',
+              }}
+            >
               Paying: $
               {this.props.cart.reduce(
                 (sum, p) => sum + p.price * p.quantity,
@@ -130,3 +136,24 @@ export default connect(
   mapStateToProps,
   mapStateActionsToProps,
 )(Payment);
+
+Payment.propTypes = {
+  cart: PropTypes.arrayOf(PropTypes.object),
+  error: PropTypes.string,
+  loading: PropTypes.bool,
+  login: PropTypes.func.isRequired,
+  logout: PropTypes.func.isRequired,
+  navigation: PropTypes.objectOf(PropTypes.func).isRequired,
+  pay: PropTypes.func.isRequired,
+  paying: PropTypes.bool,
+  register: PropTypes.func.isRequired,
+  user: PropTypes.objectOf(PropTypes.string),
+};
+
+Payment.defaultProps = {
+  cart: [],
+  error: null,
+  loading: false,
+  paying: false,
+  user: null,
+};

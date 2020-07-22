@@ -1,10 +1,16 @@
-/* eslint-disable react/prop-types */
+import PropTypes from 'prop-types';
 import React from 'react';
 import { Button as LinkButton, View } from 'react-native';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import {
-  Content, Form, Header, Input, Item, Label, Title,
+  Content,
+  Form,
+  Header,
+  Input,
+  Item,
+  Label,
+  Title,
 } from 'native-base';
 import * as UserActions from '../reducers/user';
 import LoginOrRegister from '../components/loginOrRegister';
@@ -18,9 +24,7 @@ function MyProfile(props) {
       }}
     >
       <Header>
-        <Title style={{ paddingTop: 10 }}>
-          My Profile
-        </Title>
+        <Title style={{ paddingTop: 10 }}>My Profile</Title>
       </Header>
 
       {!props.user && (
@@ -108,3 +112,18 @@ export default connect(
   mapStateToProps,
   mapStateActionsToProps,
 )(MyProfile);
+
+MyProfile.propTypes = {
+  error: PropTypes.string,
+  loading: PropTypes.bool,
+  login: PropTypes.func.isRequired,
+  logout: PropTypes.func.isRequired,
+  register: PropTypes.func.isRequired,
+  user: PropTypes.objectOf(PropTypes.string),
+};
+
+MyProfile.defaultProps = {
+  error: null,
+  loading: false,
+  user: null,
+};

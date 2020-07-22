@@ -1,3 +1,4 @@
+/* eslint-disable prefer-promise-reject-errors */
 export const get = (uri) => new Promise((resolve) => {
   let response;
 
@@ -99,10 +100,7 @@ export const post = (uri, data) => new Promise((resolve, reject) => {
           city: 'Testington',
         };
       } else {
-        setTimeout(
-          () => reject(new Error('Unauthorised')),
-          1000,
-        );
+        setTimeout(() => reject('Unauthorised'), 1000);
         return null;
       }
       break;
@@ -111,7 +109,7 @@ export const post = (uri, data) => new Promise((resolve, reject) => {
         response = true;
       } else {
         setTimeout(
-          () => reject(new Error('Payment not authorised')),
+          () => reject('Payment not authorised'),
           1000,
         );
         return null;

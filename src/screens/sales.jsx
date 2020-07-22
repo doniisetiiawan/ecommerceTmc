@@ -1,10 +1,17 @@
-/* eslint-disable react/prop-types */
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { Image, ScrollView } from 'react-native';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import {
-  Body, Button, Card, CardItem, Left, Right, Text, Title,
+  Body,
+  Button,
+  Card,
+  CardItem,
+  Left,
+  Right,
+  Text,
+  Title,
 } from 'native-base';
 import * as ProductActions from '../reducers/products';
 
@@ -82,3 +89,9 @@ export default connect(
   mapStateToProps,
   mapStateActionsToProps,
 )(Sales);
+
+Sales.propTypes = {
+  addProductToCart: PropTypes.func.isRequired,
+  navigation: PropTypes.objectOf(PropTypes.func).isRequired,
+  products: PropTypes.arrayOf(PropTypes.object).isRequired,
+};

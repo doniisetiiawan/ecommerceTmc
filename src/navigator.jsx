@@ -46,7 +46,9 @@ function Navigator() {
             name="Sales"
             component={Sales}
             options={{
-              tabBarIcon: () => <Icon name="md-add-circle" />,
+              tabBarIcon: () => (
+                <Icon name="md-add-circle" />
+              ),
             }}
           />
         </Tab.Navigator>

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { View } from 'react-native';
 import Login from './login';
@@ -44,3 +45,15 @@ class LoginOrRegister extends Component {
 }
 
 export default LoginOrRegister;
+
+LoginOrRegister.propTypes = {
+  error: PropTypes.string,
+  loading: PropTypes.bool,
+  login: PropTypes.func.isRequired,
+  register: PropTypes.func.isRequired,
+};
+
+LoginOrRegister.defaultProps = {
+  error: null,
+  loading: false,
+};

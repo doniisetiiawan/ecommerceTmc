@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { View, Button as LinkButton } from 'react-native';
 import {
@@ -78,3 +79,15 @@ class Login extends Component {
 }
 
 export default Login;
+
+Login.propTypes = {
+  changeToRegister: PropTypes.func.isRequired,
+  error: PropTypes.string,
+  loading: PropTypes.bool,
+  login: PropTypes.func.isRequired,
+};
+
+Login.defaultProps = {
+  error: null,
+  loading: false,
+};

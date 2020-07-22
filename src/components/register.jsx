@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { View, Button as LinkButton } from 'react-native';
 import {
@@ -118,3 +119,15 @@ class Register extends Component {
 }
 
 export default Register;
+
+Register.propTypes = {
+  changeToLogin: PropTypes.func.isRequired,
+  error: PropTypes.string,
+  loading: PropTypes.bool,
+  register: PropTypes.func.isRequired,
+};
+
+Register.defaultProps = {
+  error: null,
+  loading: false,
+};

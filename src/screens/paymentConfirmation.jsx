@@ -1,3 +1,5 @@
+/* eslint-disable react/no-array-index-key */
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { View } from 'react-native';
 import { bindActionCreators } from 'redux';
@@ -29,7 +31,13 @@ class PaymentConfirmation extends Component {
   render() {
     return (
       <View>
-        <Title style={{ marginTop: 20 }}>
+        <Title
+          style={{
+            marginTop: 20,
+            color: 'dark',
+            alignSelf: 'center',
+          }}
+        >
           Your purchase is complete!
         </Title>
         <Text style={{ margin: 20 }}>
@@ -88,3 +96,10 @@ export default connect(
   mapStateToProps,
   mapStateActionsToProps,
 )(PaymentConfirmation);
+
+PaymentConfirmation.propTypes = {
+  cart: PropTypes.arrayOf(PropTypes.object).isRequired,
+  navigation: PropTypes.objectOf(PropTypes.func).isRequired,
+  resetCart: PropTypes.func.isRequired,
+  resetPayment: PropTypes.func.isRequired,
+};
