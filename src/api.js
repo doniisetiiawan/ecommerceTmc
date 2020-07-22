@@ -9,7 +9,7 @@ export const get = (uri) => new Promise((resolve) => {
           name: 'Mastering Docker - Second Edition',
           author: 'James Cameron',
           img:
-              'https://d1ldz4te4covpm.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/B06565_MockupCover_0.png',
+              'https://res.cloudinary.com/bao-codersx/image/upload/v1588414918/coverBook_rhne73.jpg',
           price: 39.58,
         },
         {
@@ -17,7 +17,7 @@ export const get = (uri) => new Promise((resolve) => {
           name: 'Go Cookbook',
           author: 'James Cameron',
           img:
-              'https://dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/B02767_cover.png',
+              'https://res.cloudinary.com/bao-codersx/image/upload/v1588414918/coverBook_rhne73.jpg',
           price: 35.98,
           discount: 20,
         },
@@ -26,7 +26,7 @@ export const get = (uri) => new Promise((resolve) => {
           name: 'Build incredible chatbots',
           author: 'John Abruzzo',
           img:
-              'https://d1ldz4te4covpm.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/bookretailers/V08833.png',
+              'https://res.cloudinary.com/bao-codersx/image/upload/v1588414918/coverBook_rhne73.jpg',
           price: 99.58,
           discount: 25,
         },
@@ -35,7 +35,7 @@ export const get = (uri) => new Promise((resolve) => {
           name: 'JavaScript by Example',
           author: 'Anto Aravinth',
           img:
-              'https://d255esdrn735hr.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/bookretailers/V07863_MockupCover_0.png',
+              'https://res.cloudinary.com/bao-codersx/image/upload/v1588414918/coverBook_rhne73.jpg',
           price: 105.06,
         },
         {
@@ -43,7 +43,7 @@ export const get = (uri) => new Promise((resolve) => {
           name: 'REST APIs with Flask and Python',
           author: 'Jose Salvatierra',
           img:
-              'https://dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/bookretailers/V09103.PNG',
+              'https://res.cloudinary.com/bao-codersx/image/upload/v1588414918/coverBook_rhne73.jpg',
           price: 92.82,
         },
         {
@@ -52,7 +52,7 @@ export const get = (uri) => new Promise((resolve) => {
               'Universal JavaScript with React, Node, and Redux',
           author: 'Maxime Najim',
           img:
-              'https://d255esdrn735hr.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/bookretailers/V06966_MockupCover.jpg',
+              'https://res.cloudinary.com/bao-codersx/image/upload/v1588414918/coverBook_rhne73.jpg',
           price: 105.6,
         },
         {
@@ -61,7 +61,7 @@ export const get = (uri) => new Promise((resolve) => {
               'The Complete Flexbox Tutorial: Learn CSS3 Flexbox in 2017 ',
           author: 'Peter Sommerhoff',
           img:
-              'https://d255esdrn735hr.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/bookretailers/V09119.PNG',
+              'https://res.cloudinary.com/bao-codersx/image/upload/v1588414918/coverBook_rhne73.jpg',
           price: 80.58,
         },
         {
@@ -69,7 +69,7 @@ export const get = (uri) => new Promise((resolve) => {
           name: 'Exploring Experience Design',
           author: 'Ezra Schwartz',
           img:
-              'https://d255esdrn735hr.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/9781787122444.png',
+              'https://res.cloudinary.com/bao-codersx/image/upload/v1588414918/coverBook_rhne73.jpg',
           price: 22.68,
         },
       ];

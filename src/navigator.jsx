@@ -5,6 +5,7 @@ import { Icon } from 'native-base';
 import ProductsNavigator from './productsNavigator';
 import PurchaseNavigator from './purchaseNavigator';
 import MyProfile from './screens/myProfile';
+import Sales from './screens/sales';
 
 const Tab = createBottomTabNavigator();
 
@@ -39,6 +40,13 @@ function Navigator() {
             options={{
               tabBarIcon: () => <Icon name="person" />,
               title: 'My Profile',
+            }}
+          />
+          <Tab.Screen
+            name="Sales"
+            component={Sales}
+            options={{
+              tabBarIcon: () => <Icon name="md-add-circle" />,
             }}
           />
         </Tab.Navigator>
