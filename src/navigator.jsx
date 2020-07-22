@@ -1,23 +1,9 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Text, View } from 'react-native';
 import { Icon } from 'native-base';
 import ProductsNavigator from './productsNavigator';
-
-function SettingsScreen() {
-  return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}
-    >
-      <Text>Settings!</Text>
-    </View>
-  );
-}
+import PurchaseNavigator from './purchaseNavigator';
 
 const Tab = createBottomTabNavigator();
 
@@ -25,15 +11,25 @@ function Navigator() {
   return (
     <>
       <NavigationContainer>
-        <Tab.Navigator>
+        <Tab.Navigator
+          tabBarOptions={{
+            activeTintColor: '#000',
+            inactiveTintColor: '#aaa',
+          }}
+        >
           <Tab.Screen
             name="Home"
             component={ProductsNavigator}
-            options={{ tabBarIcon: () => <Icon name="home" /> }}
+            options={{
+              tabBarIcon: () => <Icon name="home" />,
+            }}
           />
           <Tab.Screen
-            name="Settings"
-            component={SettingsScreen}
+            name="MyCart"
+            component={PurchaseNavigator}
+            options={{
+              tabBarIcon: () => <Icon name="cart" />,
+            }}
           />
         </Tab.Navigator>
       </NavigationContainer>
